@@ -19,7 +19,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     startDate.setDate(startDate.getDate() - parseInt(range, 10)); // Adjust the start date based on the selected range
 
     const timestamps = [];
-    for (let i = 0; i <= parseInt(range, 10); i++) {
+    for (let i = 0; i <= parseInt(range, 10); i += 1) {
       const newDate = new Date(startDate.getTime() + i * 24 * 60 * 60 * 1000);
       timestamps.push(newDate.toLocaleDateString());
     }

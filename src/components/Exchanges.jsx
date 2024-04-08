@@ -34,7 +34,7 @@ const Exchanges = () => {
         {data?.map((exchange, index) => (
           <Panel
             key={index}
-            header={
+            header={(
               <Row align="middle">
                 <Col span={6}>
                   <Avatar src={exchange.image} />
@@ -46,12 +46,9 @@ const Exchanges = () => {
                 </Col>
                 <Col span={6}>${millify(exchange.year_established * 100)}</Col>
               </Row>
-            }
+        )}
           >
-            {HTMLReactParser(
-              exchange.description ||
-                `${exchange.name} Launched in September ${exchange.year_established}. KuCoin is a global cryptocurrency exchange with its operational headquarters in Seychelles. As a user-oriented platform with a focus on inclusiveness and community action reach, it offers over 800 digital assets and currently provides Spot trading, Margin trading, P2P Fiat trading, Futures trading, Staking, and Lending to its 30 million users in more than 200 countries and regions. KuCoin is currently one of the top 5 crypto exchanges. In 2023, KuCoin was named one of the Best Crypto Exchanges by Forbes and recognized as a highly commended global exchange in Finder's 2023 Global Cryptocurrency Trading Platform Awards.`
-            )}
+            {HTMLReactParser(`${exchange.name} Launched in September ${exchange.year_established}. KuCoin is a global cryptocurrency exchange with its operational headquarters in Seychelles.`)}
           </Panel>
         ))}
       </Collapse>
