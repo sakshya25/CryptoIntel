@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Typography, Row, Col, Card, Input } from "antd";
-import moment from "moment";
-import Loader from "./Loader";
+import React, { useState } from 'react';
+import { Typography, Row, Col, Card, Input } from 'antd';
+import moment from 'moment';
+import Loader from './Loader';
 
-import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi"; // Update import statement
+import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'; // Update import statement
 
 const { Title, Text } = Typography;
 const { Search } = Input;
@@ -17,9 +17,7 @@ const News = ({ simplified }) => {
 
   if (isFetching) return <Loader />;
 
-  const filteredNews = cryptoNews?.data?.filter((news) =>
-    news.title.toLowerCase().includes(searchText.toLowerCase())
-  );
+  const filteredNews = cryptoNews?.data?.filter((news) => news.title.toLowerCase().includes(searchText.toLowerCase()));
 
   return (
     <Row gutter={[24, 24]}>
@@ -41,7 +39,7 @@ const News = ({ simplified }) => {
                 <img
                   src={news.thumbnail}
                   alt="news"
-                  style={{ maxWidth: "200px", height: "100px" }}
+                  style={{ maxWidth: '200px', height: '100px' }}
                 />
               </div>
               <p>
