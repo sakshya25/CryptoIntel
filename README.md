@@ -9,10 +9,15 @@ CryptoIntel is a comprehensive platform for real-time cryptocurrency data analys
 
 Features
 Real-Time Data: Fetch real-time cryptocurrency prices and market data.
+
 Market Analysis: Perform technical and fundamental analysis of various cryptocurrencies.
+
 Alerts and Notifications: Set up alerts for specific price points or market conditions.
+
 Historical Data: Access historical price data for detailed analysis.
+
 Portfolio Management: Track and manage your cryptocurrency investments.
+
 Installation
 Prerequisites
 Java 8 or higher
@@ -21,9 +26,12 @@ Git
 Clone the Repository
 bash
 Copy code
+
 git clone https://github.com/yourusername/cryptointel.git
+
 cd cryptointel
 Build the Project
+
 Use Maven to build the project:
 
 bash
